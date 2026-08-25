@@ -76,9 +76,10 @@ nav {
 .nav-links.is-open {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
     position: absolute;
-    top: 60px;
+    top: 50px;
     left: 0;
     right: 0;
     background-color: var(--surface);
@@ -88,7 +89,7 @@ nav {
 }
 
 .nav-links.is-open a {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: var(--text-2);
     transition: color var(--transition-fast);
@@ -103,6 +104,8 @@ nav {
     align-items: center;
     gap: 0.75rem;
 }
+
+/* Toggles & Switches */
 
 .theme-switch {
     position: relative;
@@ -207,4 +210,155 @@ nav {
     background-color: var(--text);
     border-radius: 3px;
     transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+/* HERO SECTION */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1.25rem;
+    gap: 1.75rem;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 370px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+}
+
+.hero-tag {
+    background-color: var(--accent-light);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-pill);
+    margin-bottom: 0.3rem;
+
+}
+
+.hero-title {
+    font-family: var(--font-title);
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.hero-title .highlight {
+    margin-top: 0.35rem; 
+    background: linear-gradient(transparent 40%, var(--highlight-bg) 40%);
+    border-radius: 2px;
+}
+
+.hero-bio {
+    font-size: 0.95rem;
+    color: var(--text-2);
+    line-height: 1.5;
+    margin-bottom: 0.3rem;
+}
+
+.hero-location {
+    font-size: 0.8rem;
+    color: var(--text-3);
+    margin-bottom: 0.5rem;
+}
+
+/* Actions & Buttons */
+
+.hero-actions {
+    display: flex;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex: 1;
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+    transition: background-color var(--transition-fast), transform 0.1s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-light);
+}
+
+.hero-socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.45rem 0.9rem;
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    align-self: center;
+    margin-top: 0.25rem;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    color: var(--text-2);
+    transition: color var(--transition-fast);
+}
+
+.social-btn:hover {
+    color: var(--accent);
+}
+
+.social-btn svg {
+    width: 18px;
+    height: 18px;
 }
