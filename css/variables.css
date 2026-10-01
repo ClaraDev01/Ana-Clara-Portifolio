@@ -6,6 +6,8 @@
     --bg-alt: #f2ecf5; /* Alternative background */
     --surface: #ffffff; /* Cards, navbar, forms */
 
+    --highlight-bg: var(--accent-light); /* Highlight background for text and elements */
+
     --border: #e8dff0; /* Borders */
 
     --text: #1a0a2e; /* Main text */
@@ -37,6 +39,8 @@
     --bg: #0f0a1a;
     --bg-alt: #1a1029;
     --surface: #1e1330;
+    
+    --highlight-bg: rgba(224, 80, 144, 0.35);
 
     --border: #2e2040;
 
