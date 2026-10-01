@@ -8,6 +8,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
@@ -271,7 +272,7 @@ nav {
 }
 
 .hero-title .highlight {
-    margin-top: 0.35rem; 
+    margin-top: 0.35rem;
     background: linear-gradient(transparent 40%, var(--highlight-bg) 40%);
     border-radius: 2px;
 }
@@ -366,7 +367,7 @@ nav {
 /* ABOUT SECTION */
 
 .about {
-    padding: 3rem 1.25rem;
+    padding: 4.5rem 1.25rem;
     background-color: var(--bg-alt);
 }
 
@@ -434,4 +435,92 @@ nav {
     font-size: 0.7rem;
     color: var(--text-3);
     line-height: 1.3;
+}
+
+/* SKILLS SECTION */
+
+.skills {
+    padding: 4.5rem 1.25rem;
+    background-color: var(--bg);
+}
+
+.skills-content {
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.skills-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.skills-group+.skills-group {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.skills-group-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-3);
+}
+
+.skill-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: var(--radius-pill);
+    background-color: var(--accent-light);
+    color: var(--accent);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.skill-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.skill-bar {
+    width: 100%;
+    height: 5px;
+    background-color: var(--border);
+    border-radius: var(--radius-pill);
+    overflow: hidden;
+}
+
+.skill-fill {
+    width: 0;
+    height: 100%;
+    background: var(--accent);
+    border-radius: inherit;
+    transition: width 1.3s cubic-bezier(.22, .61, .36, 1);
 }

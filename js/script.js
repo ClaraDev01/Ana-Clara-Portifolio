@@ -35,6 +35,10 @@ function applyLang(lang) {
 
     langText.textContent = lang === 'pt' ? 'EN' : 'PT';
 
+    document.title = lang === 'pt'
+        ? 'Ana Clara Fonseca | Desenvolvedora Full-Stack'
+        : 'Ana Clara Fonseca | Full-Stack Developer';
+
     document.querySelectorAll('[data-pt]').forEach(el => {
         const svg = el.querySelector('svg');
         const text = el.getAttribute(lang === 'pt' ? 'data-pt' : 'data-en');
@@ -48,6 +52,28 @@ function applyLang(lang) {
         }
     });
 }
+
+// ── SKILLS ─────────────────────────────────────────────────────
+
+const skillFills = document.querySelectorAll('.skill-fill');
+
+const skillsObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const width = entry.target.dataset.width;
+            entry.target.style.width = `${width}%`;
+
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.3
+});
+
+skillFills.forEach(skill => {
+    skillsObserver.observe(skill);
+});
+
 
 // ── MENU MOBILE ───────────────────────────────────────────────
 
