@@ -11,9 +11,19 @@ html.setAttribute('data-theme', initTheme);
 themeToggle.checked = initTheme === 'dark';
 
 themeToggle.addEventListener('change', () => {
+    const scrollY = window.scrollY;
+
     const theme = themeToggle.checked ? 'dark' : 'light';
+
     html.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
+
+    html.style.scrollBehavior = 'auto';
+    window.scrollTo(0, scrollY);
+
+    requestAnimationFrame(() => {
+        html.style.scrollBehavior = '';
+    });
 });
 
 // ── LANGUAGE ────────────────────────────────────────────────────
