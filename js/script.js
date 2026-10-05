@@ -74,6 +74,23 @@ skillFills.forEach(skill => {
     skillsObserver.observe(skill);
 });
 
+// ── EXPERIENCE ─────────────────────────────────────────────────────
+
+const experienceItems = document.querySelectorAll('.experience-item');
+
+const experienceObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15 });
+
+experienceItems.forEach((item, index) => {
+    item.style.transitionDelay = `${index * 0.12}s`;
+    experienceObserver.observe(item);
+});
 
 // ── MENU MOBILE ───────────────────────────────────────────────
 

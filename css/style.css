@@ -524,3 +524,127 @@ nav {
     border-radius: inherit;
     transition: width 1.3s cubic-bezier(.22, .61, .36, 1);
 }
+
+/* EXPERIENCE */
+
+.experience {
+    padding: 4.5rem 1.25rem;
+    background-color: var(--bg-alt);
+}
+
+.experience-content {
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.experience-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.experience-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 12px 1fr;
+    gap: 1rem;
+}
+
+.experience-item:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    bottom: -1.5rem;
+    left: 5px;
+    width: 1px;
+    background-color: var(--border);
+}
+
+.experience-marker {
+    position: relative;
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+    margin-top: 0.35rem;
+    border-radius: 50%;
+    background-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-light);
+}
+
+.experience-card {
+    padding: 1.25rem;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.experience-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.experience-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.experience-company {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-3);
+}
+
+.experience-role {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--accent);
+}
+
+.experience-date {
+    width: fit-content;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-pill);
+    background-color: var(--bg);
+    font-size: 0.7rem;
+    color: var(--text-3);
+    white-space: nowrap;
+}
+
+.experience-description {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--text-2);
+}
+
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.1rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-pill);
+    background-color: var(--accent-light);
+    color: var(--accent);
+    font-size: 0.7rem;
+    font-weight: 500;
+}
